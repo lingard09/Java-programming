@@ -1,0 +1,42 @@
+import javax.swing.JOptionPane;
+
+
+public class Rep02BinaryToDigit2 {
+	public static void main(String[] args) {
+		String input;
+		input = JOptionPane.showInputDialog("Enter a 4-bit binary number: ");
+		int output = 0;
+		
+		if(input.length() == 4) {
+			int i;
+			
+			int num = Integer.parseInt(input);
+			
+			String[] str = new String[input.length()];
+			
+			if(str[0] == "1") {
+				output += 8;
+			}
+			if(str[1] == "1") {
+				output += 4;
+			}
+			if(str[2] == "1") {
+				output += 2;
+			}
+			if(str[3] == "1") {
+				output += 1;
+			}
+			
+			JOptionPane.showMessageDialog(null, "The decimal value is: " + output);
+			
+			
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "Invalid input. Please a 4-bit binary number.");
+		}
+		
+		System.exit(0);
+		
+	}
+
+}
